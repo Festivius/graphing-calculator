@@ -1,2 +1,6 @@
-Flask==2.2.5
+Flask
 Flask-CORS
+matplotlib
+numpy
+Pillow
+sympy
