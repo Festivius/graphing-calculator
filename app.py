@@ -46,7 +46,7 @@ def graph(equation, x_size,y_size):
                 val = np.nan
             y.append(val)
         except:
-            print(i,'undefined point or invalid equation')
+            #print(i,'undefined point or invalid equation')
             val = np.nan
 
     y = np.array(y)
@@ -81,7 +81,7 @@ def graph(equation, x_size,y_size):
     plt.xlim(-10,10)
     plt.ylim(-10,10)
 
-    print("X-axis limits:", plt.xlim())
+    #print("X-axis limits:", plt.xlim())
 
     plt.savefig(filepath)
     plt.close()
@@ -104,8 +104,8 @@ def run_python():
         data = request.get_json()
         input_value = data.get('input',0)
         output_value = graph(input_value, 10, 10)
-        print("outputFILENAME:",output_value)
-        print("output: "+ f"/static/images/{output_value}")
+        #print("outputFILENAME:",output_value)
+        #print("output: "+ f"/static/images/{output_value}")
         return jsonify({"output": output_value})
     except Exception as e:  
         return jsonify({"error": str(e)}), 400
