@@ -18,7 +18,7 @@ async function processInput() {
     }
 
     try {
-        const response = await fetch('http://127.0.0.1:8080/run_python', {
+        const response = await fetch('https://graphing-calculator-production.up.railway.app/run_python', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
