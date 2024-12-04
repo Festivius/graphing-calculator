@@ -1,4 +1,4 @@
-# Graphing 
+# Graphing Calculator
 A simple and interactive web-based graphing calculator that allows users to input mathematical equations, validate them, and visualize the results.
 
 # Features
