@@ -31,7 +31,7 @@ async function processInput() {
         if (response.ok) {
             const img = document.getElementById('image-container');
             console.log(img);
-            img.src = `http://127.0.0.1:5000/${data.output}`;
+            img.src = `https://graphing-calculator-production.up.railway.app/static/images/${data.output}`;
             img.loading = 'lazy';
 
             console.log(img);
