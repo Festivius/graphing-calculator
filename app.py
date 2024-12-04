@@ -106,7 +106,7 @@ def run_python():
         output_value = graph(input_value, 10, 10)
         print("outputFILENAME:",output_value)
         print("output: "+ f"/static/images/{output_value}")
-        return jsonify({"output": f"/static/images/{output_value}"})
+        return jsonify({"output": output_value)
     except Exception as e:  
         return jsonify({"error": str(e)}), 400
 
