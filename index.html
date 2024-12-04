@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graphing calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="info">
+            <form>
+                <p id="enter">graph an equation:</p>
+                <textarea id="equation" name="equation" placeholder="f(x) = sin(x^2) - x/2" required></textarea>
+         
+                <button type="button" id="submit">Submit</button>
+                <button type="button" id="clear">Clear</button>
+            </form>
+
+            <p id="invalid">invalid equation</p>
+            <p id="result"></p>
+        </div>
+
+        <img id="image-container" src="placeholder.png">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
