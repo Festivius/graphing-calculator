@@ -2,15 +2,15 @@
 document.getElementById('submit').addEventListener('click',processInput)
 document.getElementById('clear').addEventListener('click',clear)
 
-console.log('hlelo is this workign');
+//console.log('hlelo is this workign');
 
 async function processInput() {
     equation = document.getElementById('equation').value;
     const container = document.getElementById('image-container');
     const error_msg = document.getElementById('invalid');
 
-    console.log(equation);
-    console.log(JSON.stringify({ input: equation }))
+    //console.log(equation);
+    //console.log(JSON.stringify({ input: equation }))
 
     if (equation == '') {
         equation = 'f(x) = sin(x^2) - x/2';
@@ -30,11 +30,11 @@ async function processInput() {
 
         if (response.ok) {
             const img = document.getElementById('image-container');
-            console.log(img);
+            //console.log(img);
             img.src = `https://graphing-calculator-production.up.railway.app/static/images/${data.output}`;
             img.loading = 'lazy';
 
-            console.log(img);
+            //console.log(img);
 
             container.innerHTML = '';
 
