@@ -1,5 +1,6 @@
 Flask
 Flask-CORS
+Gunicorn
 matplotlib
 numpy
 Pillow
