@@ -22,7 +22,7 @@ body {
 
 #submit {
     font-size: 20px;
-    width: 120px;
+    width: 5vw;
     padding: 1vh;
     background-color: #FD7E14;
     color: white;
@@ -35,7 +35,7 @@ body {
 
 #clear {
     font-size: 20px;
-    width: 120px;
+    width: 5vw;
     padding: 1vh;
     background-color: #A2CFFE;
     color: white;
