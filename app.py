@@ -24,6 +24,11 @@ def preprocess(expr):
     expr = re.sub(r'(\d)([a-zA-Z])', r'\1*\2', expr)
     expr = re.sub(r'(\d)([a-zA-Z]+\()', r'\1*\2', expr)
     expr = re.sub(r'(\))(\d|[a-zA-Z])', r'\1*\2', expr)
+    if expr.__contains__('|'):
+        ind = expr.index('|')
+        expr = expr[:ind]+'abs('+expr[ind+1:]
+        ind = expr.index('|')
+        expr = expr[:ind]+')'+expr[ind+1:]
     return expr
 
 
