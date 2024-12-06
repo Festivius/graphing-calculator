@@ -54,4 +54,5 @@ async function processInput() {
 function clear() {
     document.getElementById('equation').value = '';
     document.getElementById('image-container').src = 'placeholder.png';
+    error_msg.style.visibility = 'hidden';
 }
