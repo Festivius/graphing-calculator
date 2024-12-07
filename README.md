@@ -9,5 +9,5 @@ A simple and interactive web-based graphing calculator that allows users to inpu
 # Setup
 - Clone this repository or download the ZIP file
 - Open the project folder
-- Run app.py
+- Run app.py and adjust script.js to where it is being hosted
 - Launch by opening index.html
