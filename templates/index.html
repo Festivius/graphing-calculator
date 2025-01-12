@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>graphing calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Graphing Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="flex-container">
         <div class="info">
             <form>
-                <p id="enter">graph an equation:</p>
+                <p id="enter">Graph an equation:</p>
                 <textarea id="equation" name="equation" placeholder="f(x) = sin(x^2) - x/2" required></textarea>
-         
                 <button type="button" id="submit">Submit</button>
                 <button type="button" id="clear">Clear</button>
             </form>
 
-            <p id="invalid">invalid equation</p>
+            <p id="invalid">Invalid equation</p>
             <p id="result"></p>
         </div>
-
-        <img id="image-container" src="placeholder.png">
+        <img id="image-container" src="{{ url_for('static', filename='images/placeholder.png') }}">
     </div>
-
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
