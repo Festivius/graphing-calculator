@@ -97,7 +97,7 @@ def graph(equation, x_size,y_size):
 
 matplotlib.use('Agg')
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+CORS(app)
 
 
 @app.route('/')
