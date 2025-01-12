@@ -1,7 +1,7 @@
-document.getElementById('submit').addEventListener('click',processInput)
-document.getElementById('clear').addEventListener('click',clear)
-
 //console.log('hlelo is this workign');
+
+document.getElementById('submit').addEventListener('click',processInput);
+document.getElementById('clear').addEventListener('click',clear);
 
 async function processInput() {
     equation = document.getElementById('equation').value;
