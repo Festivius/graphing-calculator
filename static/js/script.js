@@ -14,7 +14,7 @@ async function processInput() {
     }
 
     try {
-        const response = await fetch('https://graphing-calculator-production.up.railway.app/run_python', {
+        const response = await fetch('https://graphing-calculator.up.railway.app/run_python', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ async function processInput() {
 
         if (response.ok) {
             const img = document.getElementById('image-container');
-            img.src = `https://graphing-calculator-production.up.railway.app/static/images/${data.output}`;
+            img.src = `https://graphing-calculator.up.railway.app/static/images/${data.output}`;
             img.loading = 'lazy';
 
             container.innerHTML = '';
@@ -44,6 +44,6 @@ async function processInput() {
 
 function clear() {
     document.getElementById('equation').value = '';
-    document.getElementById('image-container').src = 'https://graphing-calculator-production.up.railway.app/static/images/placeholder.png';
+    document.getElementById('image-container').src = 'https://graphing-calculator.up.railway.app/static/images/placeholder.png';
     error_msg.style.visibility = 'hidden';
 }
