@@ -1,4 +1,3 @@
-
 document.getElementById('submit').addEventListener('click',processInput)
 document.getElementById('clear').addEventListener('click',clear)
 
@@ -8,9 +7,6 @@ async function processInput() {
     equation = document.getElementById('equation').value;
     const container = document.getElementById('image-container');
     const error_msg = document.getElementById('invalid');
-
-    //console.log(equation);
-    //console.log(JSON.stringify({ input: equation }))
 
     if (equation == '') {
         equation = 'f(x) = sin(x^2) - x/2';
@@ -30,30 +26,24 @@ async function processInput() {
 
         if (response.ok) {
             const img = document.getElementById('image-container');
-            //console.log(img);
             img.src = `https://graphing-calculator-production.up.railway.app/static/images/${data.output}`;
             img.loading = 'lazy';
-
-            //console.log(img);
 
             container.innerHTML = '';
 
             document.getElementById('result').innerText = ``;
             error_msg.style.visibility = 'hidden';
         } else {
-            //document.getElementById('result').innerText = `Error: ${data.error}`;
             error_msg.style.visibility = 'visible';
         }
     } catch (error) {
         console.error('Error:', error);
-        //document.getElementById('result').innerText = 'An error occurred.';
     }
 }
 
 
 function clear() {
     document.getElementById('equation').value = '';
-    document.getElementById('image-container').src = 'placeholder.png';
+    document.getElementById('image-container').src = 'https://graphing-calculator-production.up.railway.app/static/images/placeholder.png';
     error_msg.style.visibility = 'hidden';
 }
-
