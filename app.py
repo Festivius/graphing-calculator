@@ -97,7 +97,7 @@ def graph(equation, x_size,y_size):
 
 matplotlib.use('Agg')
 app = Flask(__name__)
-CORS(app, origins=["https://graphing-calculator.up.railway.app"], methods=["GET", "POST", "OPTIONS"])
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 
 @app.route('/')
@@ -107,6 +107,13 @@ def home():
 
 @app.route('/run_python', methods=['POST'])
 def run_python():
+    if request.method == 'OPTIONS':
+        response = Flask.make_response()
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        response.headers.add('Access-Control-Allow-Methods', 'POST, OPTIONS')
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
+        return response, 200
+    
     try:
         data = request.get_json()
         input_value = data.get('input',0)
